@@ -9,7 +9,7 @@ To clone this repository, run the following command in your terminal:
 
 ```bash
 git clone https://github.com/ValeriaZubet/CypressAssignment.git
-cd CypressAssignment
+
 ```
 
 ## Install Cypress
@@ -19,7 +19,7 @@ Before running the tests, make sure you have Node.js and npm (Node Package Manag
 1. **Navigate into the cloned repository:**
 
 ```bash
-cd LenAssignment
+cd CypressAssignment
 ```
 
 2. **Install Cypress as a dev dependency:**
@@ -50,7 +50,7 @@ To run tests in the default open mode, use the following command:
 
 3. **Select and Run Tests:**
 
-   In the Cypress Test Runner, select the Chrome Browser, you'll see a list of available test files on the left sidebar. You can click on a test file to see the individual test cases within that file.
+   In the Cypress Test Runner, select E2E Testing, select the Chrome Browser, click on Start E2E Testing in Chrome, you'll see a list of available test files. You can click on a test file to see the individual test cases within that file.
 
    To run a test, click on it in the Test Runner's interface, and Cypress will execute that specific test. You can also run all tests in a file by clicking the file name or run all tests across your entire project by clicking the "Run all specs" button at the top.
 
