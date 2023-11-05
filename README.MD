@@ -71,5 +71,4 @@ To run tests in the default open mode, use the following command:
 - Ensure that you have appropriate configurations set for Cypress as per your testing requirements.
 - Cypress requires a modern version of Node.js. If you encounter issues, make sure you are using a supported version.
 
-This README includes instructions on cloning the repository, installing Cypress, and running tests both in the default open mode and in headless mode.
-```
+This README includes instructions on cloning the repository, installing Cypress, and running tests in the default open mode.
