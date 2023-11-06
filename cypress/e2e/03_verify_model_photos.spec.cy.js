@@ -1,19 +1,19 @@
-import { homePage } from "../support/PageObjects/HomePage.js";
-import { searchResultsPage } from "../support/PageObjects/SearchResultsPage.js";
+import { houseDescriptionPage } from "../support/PageObjects/HouseDescriptionPage.js";
+import { housePicturesPage } from "../support/PageObjects/HousePicturesPage.js";
+import house_url from "../fixtures/url.json";
+const url = house_url.house_url;
 
-describe("Search for homes", () => {
+describe("Model Photos", () => {
   before(() => {
-    cy.visit("/");
-    cy.url().should("eq", Cypress.config("baseUrl"));
+    cy.visit(url);
+    cy.url().should("eq", url);
     cy.acceptCookies();
+    cy.closePromotionPanel();
   });
 
-  it("Search for Move in Ready homes in Dallas, TX and verify that availability filter used matches the results", () => {
-    cy.getElementByTestId("market-selector-title")
-      .contains("Find a home you’ll love")
-      .should("be.visible");
-    homePage.searchHomeByCity("Dallas", "TX");
-    searchResultsPage.applyMoveInReadyFilter();
-    searchResultsPage.verifyMoveInReadyFilterResults();
+  it("Verify that images are present on the page for the Owners Suite using the interactive floor plan", () => {
+    houseDescriptionPage.openViewModelPhotos();
+    housePicturesPage.selectOwnersSuitePhotos();
+    housePicturesPage.verifyOwnersSuitePhotosAreVisible();
   });
 });
